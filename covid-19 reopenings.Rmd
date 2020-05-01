@@ -1,7 +1,6 @@
 ---
 title: "COVID-19 state Reopenings"
 output: github_document
-
 ---
 
 The ultimate goal here it to see if there's a noticeable impact on COVID-19 cases as different states start to reopen.  
@@ -40,7 +39,7 @@ by_state <- jhu_latest %>%
 
 ```{r}
 # plot select states (initially selecting some of the states where people are protesting, will refine with more precise selection)
-states = c("Florida", "Georgia", "Michigan", "California", "Illinois")
+states = c("Florida", "Georgia", "Michigan", "California", "Illinois", "Pennsylvania")
 df <- by_state %>%
   select(date, all_of(states)) %>%
   gather(key = "State", value = "value", -date)
