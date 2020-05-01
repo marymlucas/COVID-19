@@ -1,9 +1,4 @@
 ---
-title: "R Notebook"
-output: html_notebook
----
-
----
 title: "COVID-19 state Reopenings"
 output: github_document
 
