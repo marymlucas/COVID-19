@@ -5,7 +5,8 @@ output: html_notebook
 
 ---
 title: "COVID-19 state Reopenings"
-output: html_notebook
+output: github_document
+
 ---
 
 The ultimate goal here it to see if there's a noticeable impact on COVID-19 cases as different states start to reopen.  
@@ -68,5 +69,4 @@ Sys.time()
 
 To Do:
 - Refresh states
-
 - Plot log scale
