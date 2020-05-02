@@ -5,11 +5,12 @@ output: github_document
 
 The ultimate goal here it to see if there's a noticeable impact on COVID-19 cases as different states start to reopen.  
 
-```{r}
+```{r, include=FALSE}
 # Load libraries
 library(tidyverse)
 library(lubridate)
 library(data.table) # need this for the "%like%"function
+library(wesanderson)
 ```
 
 ```{r}
@@ -40,19 +41,31 @@ by_state <- jhu_latest %>%
 ```{r}
 # plot select states (initially selecting some of the states where people are protesting, will refine with more precise selection)
 states = c("Florida", "Georgia", "Michigan", "California", "Illinois", "Pennsylvania")
-df <- by_state %>%
+states <- by_state %>%
   select(date, all_of(states)) %>%
   gather(key = "State", value = "value", -date)
-#tail(df)
 
 
-ggplot(df, aes(x = date, y = value)) + 
+
+ggplot(states, aes(x = date, y = value)) + 
   geom_line(aes(color = State)) + 
-  scale_x_date(date_breaks = "2 weeks") +
+  scale_x_date(date_breaks = "1 week") +
   ylab("Number of Cases") + 
   theme_minimal() + 
   theme(axis.text.x=element_text(angle=60, hjust=1))
 
+```
+Y-axis on a logarithmic scale
+```{r, warning=FALSE}
+
+ggplot(states, aes(x = date, y = value)) + 
+  geom_line(aes(color = State)) + 
+  scale_x_date(date_breaks = "1 weeks") +
+  ylab("Number of Cases (logarithmic axis") + 
+  xlab("Week") +
+  scale_y_continuous(trans = "log2") +
+  theme_minimal() + 
+  theme(axis.text.x=element_text(angle=60, hjust=1)) 
 ```
 
 Last Updated:
@@ -62,5 +75,4 @@ Sys.time()
 
 
 To Do:
-- Refresh states
-- Plot log scale
+* Refresh States
