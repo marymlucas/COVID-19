@@ -28,6 +28,8 @@ by_state <- jhu_latest %>%
   mutate(date = mdy(date))
 ```
 
+The blue line is the date FL started to reopen
+
 ``` r
 # plot select states (initially selecting some of the states where people are protesting, will refine with more precise selection)
 states = c("Florida", "Georgia", "Michigan", "California", "Illinois", "Pennsylvania")
@@ -36,11 +38,13 @@ states <- by_state %>%
   gather(key = "State", value = "value", -date)
 
 
-
 ggplot(states, aes(x = date, y = value)) + 
-  geom_line(aes(color = State)) + 
+  geom_line(stat= "identity", aes(color = State)) + 
   scale_x_date(date_breaks = "1 week") +
   ylab("Number of Cases") + 
+  scale_y_continuous(labels = comma) +
+  geom_vline(xintercept = as.Date("2020-05-04"), linetype="dotted", 
+                color = "blue", size=1.5) +
   theme_minimal() + 
   theme(axis.text.x=element_text(angle=60, hjust=1))
 ```
@@ -55,6 +59,8 @@ ggplot(states, aes(x = date, y = value)) +
   ylab("Number of Cases (logarithmic axis") + 
   xlab("Week") +
   scale_y_continuous(trans = "log2") +
+  geom_vline(xintercept = as.Date("2020-05-04"), linetype="dotted", 
+                color = "blue", size=1.5) +
   theme_minimal() + 
   theme(axis.text.x=element_text(angle=60, hjust=1)) 
 ```
@@ -63,6 +69,6 @@ ggplot(states, aes(x = date, y = value)) +
 
 Last Updated:
 
-    ## [1] "2020-05-02 11:23:06 EDT"
+    ## [1] "2020-05-07 23:31:57 EDT"
 
 To Do: \* Refresh States
