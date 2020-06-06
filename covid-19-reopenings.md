@@ -47,8 +47,9 @@ by_state_deaths <- jhu_latest_deaths %>%
 ```
 
 ``` r
+# Some US states did not declare an official start date and/or end date of lockdown, and therefore we set default dates for these that are far in the future to prevent them from plotting.
 # function for plotting state data
-plot_state_reopening <- function(state_name, lockdown_date="2022-12-31", reopen_date="2022-12-31") {
+plot_state_reopening <- function(state_name, lockdown_date="2100-12-31", reopen_date="2100-12-31", memorial_day = "2020-05-25", george_floyd_protests_start = "2020-05-27") {
   state <- by_state %>% select(date, all_of(state_name)) 
   
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) +
@@ -60,7 +61,11 @@ plot_state_reopening <- function(state_name, lockdown_date="2022-12-31", reopen_
     geom_vline(xintercept = as.Date(lockdown_date), linetype="dotted",
                color = "blue", size=1) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
+               color = "green", size=1) +
+    geom_vline(xintercept = as.Date(memorial_day), linetype="dotted",
                color = "red", size=1) +
+    geom_vline(xintercept = as.Date(george_floyd_protests_start), linetype="solid",
+               color = "orange", size=1) +
      #annotate("rect", xmin = as.Date(lockdown_date), xmax = as.Date(reopen_date), ymin = 0, ymax = Inf,
        # alpha = .2) +
     theme_light() +
@@ -68,7 +73,7 @@ plot_state_reopening <- function(state_name, lockdown_date="2022-12-31", reopen_
     theme(axis.text.x=element_text(angle=60, hjust=1))
   
 }
-plot_state_reopening_log <- function(state_name, lockdown_date="2022-12-31", reopen_date="2022-12-31") {
+plot_state_reopening_log <- function(state_name, lockdown_date="2100-12-31", reopen_date="2100-12-31", memorial_day = "2020-05-25", george_floyd_protests_start = "2020-05-27") {
   state <- by_state %>% select(date, all_of(state_name)) 
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) + 
     geom_line() +
@@ -79,7 +84,12 @@ plot_state_reopening_log <- function(state_name, lockdown_date="2022-12-31", reo
     geom_vline(xintercept = as.Date(lockdown_date), linetype="dotted",
                color = "blue", size=1) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
+               color = "green", size=1) +
+    geom_vline(xintercept = as.Date(memorial_day), linetype="dotted",
                color = "red", size=1) +
+    geom_vline(xintercept = as.Date(george_floyd_protests_start), linetype="solid",
+               color = "orange", size=1) +
+     
       theme_light() +
     labs(title = "Confirmed Cases (Rate of Change)", subtitle = state_name) +
       theme(axis.text.x=element_text(angle=60, hjust=1))
@@ -87,7 +97,7 @@ plot_state_reopening_log <- function(state_name, lockdown_date="2022-12-31", reo
 }
 
 # deaths
-plot_state_deaths_reopening <- function(state_name, lockdown_date="2022-12-31", reopen_date="2022-12-31") {
+plot_state_deaths_reopening <- function(state_name, lockdown_date="2100-12-31", reopen_date="2100-12-31", memorial_day = "2020-05-25", george_floyd_protests_start = "2020-05-27") {
   state <- by_state_deaths %>% select(date, all_of(state_name)) 
   
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) +
@@ -99,7 +109,12 @@ plot_state_deaths_reopening <- function(state_name, lockdown_date="2022-12-31", 
     geom_vline(xintercept = as.Date(lockdown_date), linetype="dotted",
                color = "blue", size=1) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
+               color = "green", size=1) +
+    geom_vline(xintercept = as.Date(memorial_day), linetype="dotted",
                color = "red", size=1) +
+    geom_vline(xintercept = as.Date(george_floyd_protests_start), linetype="solid",
+               color = "orange", size=1) +
+     
      #annotate("rect", xmin = as.Date(lockdown_date), xmax = as.Date(reopen_date), ymin = 0, ymax = Inf,
        # alpha = .2) +
    theme_light() +
@@ -107,7 +122,7 @@ plot_state_deaths_reopening <- function(state_name, lockdown_date="2022-12-31", 
     theme(axis.text.x=element_text(angle=60, hjust=1))
   
 }
-plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2022-12-31", reopen_date="2022-12-31") {
+plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2100-12-31", reopen_date="2100-12-31", memorial_day = "2020-05-25", george_floyd_protests_start = "2020-05-27") {
   state <- by_state_deaths %>% select(date, all_of(state_name)) 
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) + 
     geom_line() +
@@ -118,7 +133,11 @@ plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2022-12-3
     geom_vline(xintercept = as.Date(lockdown_date), linetype="dotted",
                color = "blue", size=1) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
+               color = "green", size=1) +
+    geom_vline(xintercept = as.Date(memorial_day), linetype="dotted",
                color = "red", size=1) +
+    geom_vline(xintercept = as.Date(george_floyd_protests_start), linetype="solid",
+               color = "orange", size=1) +
       theme_light() +
     labs(title = "Confirmed Deaths (Rate of Change)", subtitle = state_name) +
       theme(axis.text.x=element_text(angle=60, hjust=1))
@@ -126,8 +145,13 @@ plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2022-12-3
 }
 ```
 
-The blue vertical line is when the state first went into lockdown while
-the red vertical line is the date the state started to reopen
+Legend for Vertical Lines: Blue dotted: the date when the state first
+went into lockdown Green dotted: the date when the state started to
+reopen Red dotted: Memorial Day (lots of reports in the press about
+people not observing social distancing) Magenta solid: George Floyd is
+killed by a police man kneeling on his neck and asphyxiating him, and
+nationwide anti-racism (BLM) protests erupt across the US (and the
+world)
 
 ## Alabama
 
@@ -958,7 +982,7 @@ ggarrange(WY_cases, WY_cases_log, WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-05-28 19:20:28 EDT"
+    ## [1] "2020-06-05 20:57:18 EDT"
 
 ## REFERENCES
 
