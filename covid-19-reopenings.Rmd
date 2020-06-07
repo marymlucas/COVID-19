@@ -163,7 +163,7 @@ Legend for Vertical Lines:
 Blue dotted: the date when the state first went into lockdown
 Green dotted: the date when the state started to reopen
 Red dotted: Memorial Day (lots of reports in the press about people not observing social distancing)
-Magenta solid: George Floyd is killed by a police man kneeling on his neck and asphyxiating him, and nationwide anti-racism (BLM) protests erupt across the US (and the world)
+Magenta solid: Nationwide anti-racism (BLM) protests erupt across the US (and the world) Protests start after George Floyd is killed by a police man kneeling on his neck and asphyxiating him.
 
 ## Alabama
 
@@ -893,7 +893,8 @@ Sys.time()
 ## REFERENCES
 * <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-stay-at-home-order.html">NY Times: See Which States and Cities Have Told Residents to Stay at Home</a>
 * <a href="https://www.nytimes.com/interactive/2020/us/states-reopen-map-coronavirus.html">See Which States Are Reopening and Which Are Still Shut Down</a>
-
+* <a href="https://www.cnn.com/2020/05/25/health/us-coronavirus-memorial-day/index.html">As death toll nears 100,000, some Americans break from social distancing during holiday weekend</a>
+* <a href="https://www.nytimes.com/article/george-floyd-protests-timeline.html">George Floyd Protests: A Timeline</a>
 <a href="https://github.com/marymlucas">My Github</a> 
 
 ### To Do:
