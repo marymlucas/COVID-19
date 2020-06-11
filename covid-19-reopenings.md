@@ -148,10 +148,10 @@ plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2100-12-3
 Legend for Vertical Lines: Blue dotted: the date when the state first
 went into lockdown Green dotted: the date when the state started to
 reopen Red dotted: Memorial Day (lots of reports in the press about
-people not observing social distancing) Magenta solid: George Floyd is
-killed by a police man kneeling on his neck and asphyxiating him, and
-nationwide anti-racism (BLM) protests erupt across the US (and the
-world)
+people not observing social distancing) Magenta solid: Nationwide
+anti-racism (BLM) protests erupt across the US (and the world) Protests
+start after George Floyd is killed by a police man kneeling on his neck
+and asphyxiating him.
 
 ## Alabama
 
@@ -982,7 +982,7 @@ ggarrange(WY_cases, WY_cases_log, WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-06-05 20:57:18 EDT"
+    ## [1] "2020-06-11 15:52:55 EDT"
 
 ## REFERENCES
 
@@ -991,8 +991,12 @@ Last Updated:
     Home</a>
   - <a href="https://www.nytimes.com/interactive/2020/us/states-reopen-map-coronavirus.html">See
     Which States Are Reopening and Which Are Still Shut Down</a>
-
-<a href="https://github.com/marymlucas">My Github</a>
+  - <a href="https://www.cnn.com/2020/05/25/health/us-coronavirus-memorial-day/index.html">As
+    death toll nears 100,000, some Americans break from social
+    distancing during holiday weekend</a>
+  - <a href="https://www.nytimes.com/article/george-floyd-protests-timeline.html">George
+    Floyd Protests: A Timeline</a>
+    <a href="https://github.com/marymlucas">My Github</a>
 
 ### To Do:
 
