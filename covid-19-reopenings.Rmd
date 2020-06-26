@@ -895,7 +895,8 @@ Sys.time()
 * <a href="https://www.nytimes.com/interactive/2020/us/states-reopen-map-coronavirus.html">See Which States Are Reopening and Which Are Still Shut Down</a>
 * <a href="https://www.cnn.com/2020/05/25/health/us-coronavirus-memorial-day/index.html">As death toll nears 100,000, some Americans break from social distancing during holiday weekend</a>
 * <a href="https://www.nytimes.com/article/george-floyd-protests-timeline.html">George Floyd Protests: A Timeline</a>
-<a href="https://github.com/marymlucas">My Github</a> 
+
+* <a href="https://github.com/marymlucas">My Github</a> 
 
 ### To Do:
 * Refresh data

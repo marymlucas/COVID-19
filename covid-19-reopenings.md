@@ -982,21 +982,25 @@ ggarrange(WY_cases, WY_cases_log, WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-06-11 15:52:55 EDT"
+    ## [1] "2020-06-25 17:26:07 EDT"
 
 ## REFERENCES
 
   - <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-stay-at-home-order.html">NY
     Times: See Which States and Cities Have Told Residents to Stay at
     Home</a>
+
   - <a href="https://www.nytimes.com/interactive/2020/us/states-reopen-map-coronavirus.html">See
     Which States Are Reopening and Which Are Still Shut Down</a>
+
   - <a href="https://www.cnn.com/2020/05/25/health/us-coronavirus-memorial-day/index.html">As
     death toll nears 100,000, some Americans break from social
     distancing during holiday weekend</a>
+
   - <a href="https://www.nytimes.com/article/george-floyd-protests-timeline.html">George
     Floyd Protests: A Timeline</a>
-    <a href="https://github.com/marymlucas">My Github</a>
+
+  - <a href="https://github.com/marymlucas">My Github</a>
 
 ### To Do:
 
