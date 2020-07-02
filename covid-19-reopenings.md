@@ -1499,11 +1499,23 @@ WV_cases_log <- plot_state_reopening_log("West Virginia", "2020-03-24", "2020-05
 WV_deaths <- plot_state_deaths_reopening("West Virginia", "2020-03-24", "2020-05-04")
 WV_deaths_log <- plot_state_deaths_reopening_log("West Virginia", "2020-03-24", "2020-05-04")
 
-ggarrange(WV_cases, WV_cases_log, WV_deaths, WV_deaths_log,
-                    ncol = 2, nrow = 2)
+WV_cases
 ```
 
 ![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-53-1.png)<!-- -->
+
+``` r
+WV_cases_log
+```
+
+![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-53-2.png)<!-- -->
+
+``` r
+ggarrange(WV_deaths, WV_deaths_log,
+                    ncol = 2, nrow = 1)
+```
+
+![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-53-3.png)<!-- -->
 
 ## Wisconsin
 
@@ -1514,11 +1526,23 @@ WI_cases_log <- plot_state_reopening_log("Wisconsin", "2020-03-25", "2020-05-13"
 WI_deaths <- plot_state_deaths_reopening("Wisconsin", "2020-03-25", "2020-05-13")
 WI_deaths_log <- plot_state_deaths_reopening_log("Wisconsin", "2020-03-25", "2020-05-13")
 
-ggarrange(WI_cases, WI_cases_log, WI_deaths, WI_deaths_log,
-                    ncol = 2, nrow = 2)
+WI_cases
 ```
 
 ![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-54-1.png)<!-- -->
+
+``` r
+WI_cases_log
+```
+
+![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-54-2.png)<!-- -->
+
+``` r
+ggarrange(WI_deaths, WI_deaths_log,
+                    ncol = 2, nrow = 1)
+```
+
+![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-54-3.png)<!-- -->
 
 NOTE: Wisconsin stay-at-home order struck down on May 13.
 
@@ -1531,11 +1555,23 @@ WY_cases_log <- plot_state_reopening_log("Wyoming", "2020-03-28", "2020-05-01")
 WY_deaths <- plot_state_deaths_reopening("Wyoming", "2020-03-28", "2020-05-01")
 WY_deaths_log <- plot_state_deaths_reopening_log("Wyoming", "2020-03-28", "2020-05-01")
 
-ggarrange(WY_cases, WY_cases_log, WY_deaths, WY_deaths_log,
-                    ncol = 2, nrow = 2)
+WY_cases
 ```
 
 ![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
+
+``` r
+WY_cases_log
+```
+
+![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-55-2.png)<!-- -->
+
+``` r
+ggarrange(WY_deaths, WY_deaths_log,
+                    ncol = 2, nrow = 1)
+```
+
+![](covid-19-reopenings_files/figure-gfm/unnamed-chunk-55-3.png)<!-- -->
 
 <!-- ```{r} -->
 
@@ -1573,7 +1609,7 @@ ggarrange(WY_cases, WY_cases_log, WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-06-27 15:16:04 EDT"
+    ## [1] "2020-06-30 21:28:32 EDT"
 
 ## REFERENCES
 
