@@ -21,7 +21,7 @@ state_reopening <- function(state_name, reopen_date="2022-12-31") {
     scale_x_date(date_breaks = "1 weeks") +
     ylab("Number of Cases (logarithmic scale)") +
     xlab("Week") +
-    scale_y_continuous(trans = "log2") +
+    scale_y_continuous(trans = "log2", labels =  comma) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
                color = "red", size=1) +
       theme_bw() +
