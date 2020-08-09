@@ -82,7 +82,7 @@ plot_state_reopening_log <- function(state_name, lockdown_date="2100-12-31", reo
     scale_x_date(date_breaks = "1 weeks") +
     ylab("Cases (log scale)") +
     xlab("Week") +
-    scale_y_continuous(trans = "log10") +
+    scale_y_continuous(trans = "log10", labels = comma) +
     geom_vline(xintercept = as.Date(lockdown_date), linetype="dotted",
                color = "blue", size=1) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
@@ -135,7 +135,7 @@ plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2100-12-3
     scale_x_date(date_breaks = "1 weeks") +
     ylab("Cases (log scale)") +
     xlab("Week") +
-    scale_y_continuous(trans = "log10") +
+    scale_y_continuous(trans = "log10", labels = comma_format(digits = 0)) +
     geom_vline(xintercept = as.Date(lockdown_date), linetype="dotted",
                color = "blue", size=1) +
     geom_vline(xintercept = as.Date(reopen_date), linetype="dotted",
@@ -1609,7 +1609,7 @@ ggarrange(WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-07-20 08:21:22 EDT"
+    ## [1] "2020-08-09 11:46:59 EDT"
 
 ## REFERENCES
 
