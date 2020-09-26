@@ -54,7 +54,7 @@ plot_state_reopening <- function(state_name, lockdown_date="2100-12-31", reopen_
   
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) +
     geom_bar(stat= "identity") +
-    scale_x_date(date_breaks = "1 week") +
+    scale_x_date(date_breaks = "3 weeks") +
     ylab("Number of Cases") +
     xlab("Date") +
     scale_y_continuous(labels = comma) +
@@ -79,7 +79,7 @@ plot_state_reopening_log <- function(state_name, lockdown_date="2100-12-31", reo
   state <- by_state %>% select(date, all_of(state_name)) 
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) + 
     geom_line() +
-    scale_x_date(date_breaks = "1 weeks") +
+    scale_x_date(date_breaks = "3 weeks") +
     ylab("Cases (log scale)") +
     xlab("Week") +
     scale_y_continuous(trans = "log10", labels = comma) +
@@ -106,7 +106,7 @@ plot_state_deaths_reopening <- function(state_name, lockdown_date="2100-12-31", 
   
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) +
     geom_bar(stat= "identity") +
-    scale_x_date(date_breaks = "1 week") +
+    scale_x_date(date_breaks = "3 weeks") +
     ylab("Number of Cases") +
     xlab("Date") +
     scale_y_continuous(labels = comma) +
@@ -132,7 +132,7 @@ plot_state_deaths_reopening_log <- function(state_name, lockdown_date="2100-12-3
   state <- by_state_deaths %>% select(date, all_of(state_name)) 
   ggplot(state, aes_(x = as.name(names(state)[1]), y = as.name(names(state)[2]))) + 
     geom_line() +
-    scale_x_date(date_breaks = "1 weeks") +
+    scale_x_date(date_breaks = "3 weeks") +
     ylab("Cases (log scale)") +
     xlab("Week") +
     scale_y_continuous(trans = "log10", labels = comma_format(digits = 0)) +
@@ -1609,7 +1609,7 @@ ggarrange(WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-09-17 22:13:13 EDT"
+    ## [1] "2020-09-26 13:52:56 EDT"
 
 ## REFERENCES
 
