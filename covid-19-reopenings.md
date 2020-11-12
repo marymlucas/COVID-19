@@ -1609,7 +1609,7 @@ ggarrange(WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-10-14 19:17:56 EDT"
+    ## [1] "2020-11-12 10:14:42 EST"
 
 ## REFERENCES
 
