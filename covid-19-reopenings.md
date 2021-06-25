@@ -1609,7 +1609,7 @@ ggarrange(WY_deaths, WY_deaths_log,
 
 Last Updated:
 
-    ## [1] "2020-12-19 16:03:20 EST"
+    ## [1] "2021-06-25 17:47:39 EDT"
 
 ## REFERENCES
 
@@ -1632,4 +1632,4 @@ Last Updated:
 ### To Do:
 
   - Refresh data
-  - Add population info
+  - Add final dates all restrictions lifted

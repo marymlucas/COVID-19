@@ -1018,4 +1018,4 @@ Sys.time()
 
 ### To Do:
 * Refresh data
-* Add population info
+* Add final dates all restrictions lifted
